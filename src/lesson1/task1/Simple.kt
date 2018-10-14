@@ -59,6 +59,7 @@ fun main(args: Array<String>) {
     println(travelMinutes(9, 25, 13, 1))
     println( accountInThreeYears(100, 10))
     println (thirdDigit (3801))
+    println(numberRevert(478))
    }
 
 /**
@@ -131,4 +132,10 @@ fun accountInThreeYears(initial: Int, percent: Int): Double
  * Пользователь задает целое трехзначное число (например, 478).
  * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
  */
-fun numberRevert(number: Int): Int = TODO()
+fun numberRevert(number: Int): Int {
+    val a = number % 10
+    val b = (number % 100) / 10
+    val c = number / 100
+    return a * 100 + b * 10 + c
+}
+
